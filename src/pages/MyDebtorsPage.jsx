@@ -9,7 +9,7 @@ const MyDebtors = () => {
     useEffect(() => {
         const token = localStorage.getItem("token");
         const fetchingDeptors = async () => {
-          const request = await fetch('http://localhost:3000/connection/getMyDebtors',
+          const request = await fetch(import.meta.env.VITE_BACKEND+'/connection/getMyDebtors',
           {
             method: "GET",
             headers: {

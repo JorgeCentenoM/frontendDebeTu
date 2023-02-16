@@ -7,7 +7,7 @@ const DebtForm = ({idConnection}) =>{
     async function handleSubmit(e){
         e.preventDefault()
         const token = localStorage.getItem("token");
-        const response = await fetch('http://localhost:3000/connection/addDebt/'+idConnection,
+        const response = await fetch(import.meta.env.VITE_BACKEND+"/connection/addDebt/"+idConnection,
         {
           method:'POST',
           headers: {
